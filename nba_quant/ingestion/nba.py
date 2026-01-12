@@ -1,4 +1,4 @@
-from nba_api.stats.endpoints import leaguedashplayerstats, injuryreport
+from nba_api.stats.endpoints import leaguedashplayerstats
 import pandas as pd
 
 def fetch_players():
@@ -6,5 +6,5 @@ def fetch_players():
     return df
 
 def fetch_injuries():
-    df = injuryreport.InjuryReport().get_data_frames()[0]
-    return df
+    # Placeholder: nba_api injuryreport endpoint is deprecated or unavailable
+    return pd.DataFrame(columns=["PLAYER_NAME", "INJURY_STATUS"])
